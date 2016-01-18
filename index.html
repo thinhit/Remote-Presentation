@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Remote Key</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+	<script src="js/qrcode.js"></script>
+
+</head>
+<body ng-app="app">
+	<div class="container">
+		<h4 class="text-center">Key Remote</h4>		
+		<form>
+		  	<div class="form-group">
+			    <label for="">Network interfaces</label>
+			    <select ng-model="frm" class="form-control" ng-change="networkChange(frm)">
+			    	<option value="">Choice a network interface</option>
+			    	<option value="{{value}}" ng-repeat="(key, value) in list_networks">{{key + ': ' + value}}</option>
+			    </select>
+		  	</div>
+		</form>
+		<br/>
+		<div id="qrcode"></div>
+
+	</div>
+</body>
+	<script src="js/main.js"></script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="socket.io/socket.io.js"></script>
+	<script>
+		window.__socket = io();
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+</head>
+<body ng-app="app">
+	<button ng-click="sendKey(13)">next</button>
+</body>
+<script>
+	
+	angular.module('app', [])
+	.run(function ($rootScope, $http){
+
+		$rootScope.sendKey = function (){
+			window.__socket.emit('send:key', {key: 13})
+		}
+	})
+
+</script>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "remote-key",
+  "version": "1.0.1",
+  "description": "Remote key for pc ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "window": {
+    "title": "Key remote",
+    "position": "center",
+    "width" : 286,
+    "toolbar": false
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "robotjs": "^0.3.7",
+    "socket.io": "^1.4.4"
+  }
+}
