@@ -22,7 +22,7 @@ angular.module('app', [])
 			console.log('new socket connect', server)
 			socket.on('send:key', function (data){
 				console.log('send_key');
-				robot.typeString("Hello World");
+				//robot.typeString("Hello World");
 				robot.keyTap("enter");
 			})	
 		})
